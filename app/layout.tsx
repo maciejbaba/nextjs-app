@@ -1,4 +1,6 @@
 import "./globals.css";
+import Link from "next/link";
+import { IoCarSport } from "react-icons/io5";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +14,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header>
+          <div className="flex w-full justify-between p-2 font-bold">
+            <p className="flex text-green-500 gap-2 text-4xl items-center uppercase">
+              <IoCarSport />
+              <span>Cars</span>
+            </p>
+            <nav className="flex gap-4 items-center">
+              <Link className="link-hover" href="/cars">
+                List of cars
+              </Link>
+              <Link className="link-hover" href="/about">
+                About
+              </Link>
+              <Link className="link-hover" href="/privacy">
+                Privacy
+              </Link>
+            </nav>
+          </div>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
