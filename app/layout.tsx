@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header>
-          <div className="flex w-full justify-between p-2 font-bold">
+          <div className="flex w-full items-center justify-between p-2 font-bold">
             <p className="m-2 flex text-red-500 gap-2 text-2xl items-center uppercase">
               <IoCarSport />
               <span>Cars</span>
